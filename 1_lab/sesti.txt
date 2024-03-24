@@ -1,0 +1,11 @@
+Promatram redom funkcije u mainu.
+Prvi poziv Derived *pd = new Derived(); konstruira novi 
+objekt tipa Derived. Prilikom stvaranja objekta Derived, stvara se
+i objekt bazne klase, Base koji u konstruktoru poziva metodu.
+Budući da se u trenutku tog poziva objekt klase Derived nije
+do kraja konstruirao, poziva se implementacija metode iz bazne klase
+pa je prvi ispis: "Metoda kaze: ja sam bazna implementacija!".
+Zatim se u konstruktoru klase Derived opet poziva metoda. Ovog
+puta ispis je iz klase Derived; "Metoda kaze: ja sam izvedena implementacija!".
+Zatim se u mainu opet poziva metoda nad objektom klase Derived
+te se opet ispisuje  "Metoda kaze: ja sam izvedena implementacija!".

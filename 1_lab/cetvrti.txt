@@ -1,0 +1,10 @@
+4. Zadatak
+
+2. Alokacija memorije za objekt poc odvija se tijekom prevođenja programa i memorija se zauzima na stogu.
+Alokacija za *pb odvija se tijekom izvođenja programa i zauzima se na gomili.
+
+5. Manje instrukcija zauzima prvi poziv za objekt poc. To je zato što je *pb varijabla klase Base koja 
+pokazuje na objekt izvedene klase CoolClass. Funkcija set je u ove dvije klase virtualna, što znači da 
+će se pozivom pb->set() pozivati ispravna metoda nasljeđene klase(CoolClass) iako je varijabla tipa 
+pokazivač na Base. Za to je ipak potrebno više instrukcija jer prevoditelj prvo mora pristupiti pokazivaču
+na virtualne tablice, zatim virtualnoj tablici pa onda i odgovarajućoj definiciji funkcije.

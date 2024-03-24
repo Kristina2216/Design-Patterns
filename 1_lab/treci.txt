@@ -1,0 +1,9 @@
+Za poziv sizeof(CoolClass) dobivam 16,
+to je zbog toga što CoolClass sadrži jednu nestatičku
+varijablu tipa int koji zauzima 4 bajta te dvije virtualne funkcije.
+Budući da su virtualne, objekti ove klase, osim toga imat će i pointer na
+virtualnu tablicu koji u 64-bitnoj arhitekturi zauzima 8 bajtova. SVe skupa, to 
+je 4+8=12. Međutim, prevodioc zbog ispravnog poravnanja bitova nadodaje punjenje do
+prvog idućeg faktora najvećeg člana (u ovom slučaju 8 bajtova), dakle nadodaju se još
+4 bita punjenja i dobivamo sve skupa 16 bitova.
+ Za poziv sizeof(PlainOldClass) dobivam 4 zbog jedne int varijable.
