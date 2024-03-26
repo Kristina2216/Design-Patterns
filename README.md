@@ -1,4 +1,4 @@
-Lab assignments for the FER course Design patterns ((https://www.fer.unizg.hr/en/course/despat)
+Lab assignments for the FER course Design patterns (https://www.fer.unizg.hr/en/course/despat)
 
 The topics were as followed:
 1. Dynamic polymorphism in C, c++ and assembly code (https://www.zemris.fer.hr/~ssegvic/ooup/ooup1lab.shtml)
